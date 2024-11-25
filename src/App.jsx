@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import UserCardList from './components/UserCardList';
 
 function App() {
-  return <UserCardList/>
+  return <UserCardList />;
 }
 
 export default App;
