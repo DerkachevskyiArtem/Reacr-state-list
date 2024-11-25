@@ -26,12 +26,14 @@ class UserCard extends React.Component {
         : 'user-card female'
       : 'user-card';
 
+    const btnClass = isFriend ? 'btn remove-friend' : 'btn add-friend';
+
     return (
       <article className={cardClass}>
         <h2 className="user-card-heading">{name}</h2>
         <p className="user-card-id">Id: {id}</p>
         <p className="user-card-gender">Gender: {gender || 'Not Specified'}</p>
-        <button className="btn" onClick={this.toggleFriendStatus}>
+        <button className={btnClass} onClick={this.toggleFriendStatus}>
           {isFriend ? 'Remove Friend' : 'Add Friend'}
         </button>
       </article>
