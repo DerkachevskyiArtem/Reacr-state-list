@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.user-card {
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #6c7927c5;
+  background-color: #bac09bab;
+  display: inline-block;
+  text-align: center;
+  max-width: 200px;
+  min-height: 300px;
+}
+
+.male {
+  background-color: #b0e0e6;
+  border: 2px solid #4682b4;
+}
+
+.female {
+  background-color: #f0e68c;
+  border: 2px solid #f4a300;
+}
+
+.user-card-heading {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+.user-card-id,
+.user-card-gender {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #555;
+}
