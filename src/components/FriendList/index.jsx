@@ -14,7 +14,13 @@ function FriendList(props) {
   return (
     <article className={style.friendList}>
       <h2 className={style.friendListHeading}>Friends List</h2>
-      <ul className={style.friendListContainer}>{friendList}</ul>
+      <ul className={style.friendListContainer}>
+        {users.length > 0 ? 
+          friendList
+         : 
+          <li className={style.emptyMessage}>Is empty</li>
+        }
+      </ul>
     </article>
   );
 }

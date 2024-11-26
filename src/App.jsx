@@ -3,12 +3,11 @@ import UserCardList from './components/UserCardList';
 import UserDashboard from './components/UserDashboard';
 
 function App() {
-  return <>
-    <UserDashboard/>;
-  </>
-
+  return (
+    <>
+      <UserDashboard />
+    </>
+  );
 }
 
 export default App;
-
-
