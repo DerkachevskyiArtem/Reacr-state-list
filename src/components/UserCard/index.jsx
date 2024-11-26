@@ -2,23 +2,8 @@ import React from 'react';
 import './UserCard.css';
 
 class UserCard extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isFriend: false,
-    };
-  }
-
-  toggleFriendStatus = () => {
-    this.setState({
-      isFriend: !this.state.isFriend,
-    });
-  };
-
   render() {
-    const { id, name, gender } = this.props;
-    const { isFriend } = this.state;
+    const { id, name, gender, isFriend, toggleFriendStatus } = this.props;
 
     const cardClass = gender
       ? gender === 'male'
@@ -33,7 +18,7 @@ class UserCard extends React.Component {
         <h2 className="user-card-heading">{name}</h2>
         <p className="user-card-id">Id: {id}</p>
         <p className="user-card-gender">Gender: {gender || 'Not Specified'}</p>
-        <button className={btnClass} onClick={this.toggleFriendStatus}>
+        <button className={btnClass} onClick={() => toggleFriendStatus(id)}>
           {isFriend ? 'Remove Friend' : 'Add Friend'}
         </button>
       </article>

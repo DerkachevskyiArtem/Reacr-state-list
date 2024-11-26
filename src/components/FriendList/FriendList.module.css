@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.friendList {
+  margin: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.friendListHeading {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0077cc;
+  text-align: center;
+  background: linear-gradient(90deg, #e6f7ff, #d0ebff);
+  padding: 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.friendListContainer {
+  list-style-type: none;
+  padding: 0;
+}
+
+.friendItem {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.friendItem:hover {
+  background-color: #e6f7ff;
+  transform: scale(1.02);
+}
+
+.friendName {
+  font-size: 1.2rem;
+  color: #0077cc;
+  margin: 0;
+}
