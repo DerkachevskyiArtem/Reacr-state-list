@@ -3,7 +3,14 @@ import React from 'react';
 class Clicker extends React.Component {
   state = {
     counter: 0,
+    autoClickInterval: 2000,
+    isAutoClicking: false,
+    intervalId: null,
   };
+
+  startAutoClick = () => {
+    if(this.state.isAutoClicking) return
+  }
 
   handleIncrement = () => {
     const { counter } = this.state;
