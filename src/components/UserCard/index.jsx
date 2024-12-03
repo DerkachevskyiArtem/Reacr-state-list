@@ -1,5 +1,5 @@
 import React from 'react';
-import './UserCard.css';
+import s from './UserCard.module.css';
 
 class UserCard extends React.Component {
   render() {
@@ -7,18 +7,21 @@ class UserCard extends React.Component {
 
     const cardClass = gender
       ? gender === 'male'
-        ? 'userCard male'
-        : 'userCard female'
-      : 'userCard';
+        ? s.male
+        : s.female
+      : s.userCard;
 
-    const btnClass = isFriend ? 'btn removeFriend' : 'btn addFriend';
+    const btnClass = isFriend ? s.removeFriend : s.addFriend;
 
     return (
-      <article className={cardClass}>
-        <h2 className="userCardHeading">{name}</h2>
-        <p className="userCardId">Id: {id}</p>
-        <p className="userCardGender">Gender: {gender || 'Not Specified'}</p>
-        <button className={btnClass} onClick={() => toggleFriendStatus(id)}>
+      <article className={`${s.userCard} ${cardClass}`}>
+        <h2 className={s.userCardHeading}>{name}</h2>
+        <p className={s.userCardId}>Id: {id}</p>
+        <p className={s.userCardGender}>Gender: {gender || 'Not Specified'}</p>
+        <button
+          className={`${s.btn} ${btnClass}`}
+          onClick={() => toggleFriendStatus(id)}
+        >
           {isFriend ? 'Remove Friend' : 'Add Friend'}
         </button>
       </article>

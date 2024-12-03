@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "John Doe", "gender": "male", "isFriend": false },
+  { "id": 2, "name": "Jane Smith", "gender": "female", "isFriend": false },
+  { "id": 3, "name": "Alice Johnson", "gender": "female", "isFriend": false },
+  { "id": 4, "name": "Michael Brown", "gender": "", "isFriend": false }
+]
