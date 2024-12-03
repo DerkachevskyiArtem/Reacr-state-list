@@ -22,17 +22,17 @@ class UserCard extends React.Component {
 
     const cardClass = gender
       ? gender === 'male'
-        ? 'user-card male'
-        : 'user-card female'
-      : 'user-card';
+        ? 'userCard male'
+        : 'userCard female'
+      : 'userCard';
 
-    const btnClass = isFriend ? 'btn remove-friend' : 'btn add-friend';
+    const btnClass = isFriend ? 'btn removeFriend' : 'btn addFriend';
 
     return (
       <article className={cardClass}>
-        <h2 className="user-card-heading">{name}</h2>
-        <p className="user-card-id">Id: {id}</p>
-        <p className="user-card-gender">Gender: {gender || 'Not Specified'}</p>
+        <h2 className="userCardHeading">{name}</h2>
+        <p className="userCardId">Id: {id}</p>
+        <p className="userCardGender">Gender: {gender || 'Not Specified'}</p>
         <button className={btnClass} onClick={this.toggleFriendStatus}>
           {isFriend ? 'Remove Friend' : 'Add Friend'}
         </button>
@@ -42,3 +42,6 @@ class UserCard extends React.Component {
 }
 
 export default UserCard;
+
+
+

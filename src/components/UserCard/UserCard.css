@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.user-card {
+.userCard {
   padding: 15px;
   margin: 10px;
   border-radius: 10px;
@@ -24,14 +24,14 @@
   border: 2px solid #f4a300;
 }
 
-.user-card-heading {
+.userCardHeading {
   font-size: 1.5em;
   margin: 0;
   color: #333;
 }
 
-.user-card-id,
-.user-card-gender {
+.userCardId,
+.userCardGender {
   font-size: 1em;
   margin: 5px 0;
   color: #555;
@@ -47,10 +47,10 @@
   transition: background-color 0.3s ease;
 }
 
-.add-friend {
+.addFriend {
   background-color: #28a745;
 }
 
-.remove-friend {
+.removeFriend {
   background-color: #dc3545;
 }
