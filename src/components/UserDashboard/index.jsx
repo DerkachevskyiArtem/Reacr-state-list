@@ -41,7 +41,7 @@ class UserDashboard extends React.Component {
           users={users}
           toggleFriendStatus={this.toggleFriendStatus}
         />
-        <FriendList users={friends} />
+        <FriendList friends={friends} />
       </article>
     );
   }

@@ -1,12 +1,12 @@
 import style from './FriendList.module.css';
 
 function FriendList(props) {
-  const { users } = props;
+  const { friends } = props;
 
-  const friendList = users.map((user) => {
+  const friendList = friends.map((friend) => {
     return (
-      <li key={user.id} className={style.friendItem}>
-        <p className={style.friendName}>{user.name}</p>
+      <li key={friend.id} className={style.friendItem}>
+        <p className={style.friendName}>{friend.name}</p>
       </li>
     );
   });
@@ -15,7 +15,7 @@ function FriendList(props) {
     <article className={style.friendList}>
       <h2 className={style.friendListHeading}>Friends List</h2>
       <ul className={style.friendListContainer}>
-        {users.length > 0 ? 
+        {friends.length > 0 ? 
           friendList
          : 
           <li className={style.emptyMessage}>Is empty</li>
